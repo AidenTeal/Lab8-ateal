@@ -34,4 +34,19 @@ public class CustomListTest {
         list.addCity(new City("Estevan", "SK"));
         assertEquals(list.getCount(),listSize + 1);
     }
+
+    /**
+     * add a city to the list
+     * check if list contains city
+     */
+    @Test
+    public void hasCityTest(){
+        list = MockCityList();
+        int listSize = list.getCount();
+        City city = new City("Estevan", "SK");
+        list.addCity(city);
+        assertEquals(list.getCount(),listSize + 1);
+        // check if list contains city
+        assertEquals(list.hasCity(city), Boolean.TRUE);
+    }
 }
