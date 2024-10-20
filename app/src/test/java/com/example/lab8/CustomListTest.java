@@ -80,5 +80,6 @@ public class CustomListTest {
         list.addCity(city);
         int listSize = list.getCount();
         assertEquals(list.getCount(),listSize);
+        // extra line so I can recommit with proper commit message
     }
 }
