@@ -49,4 +49,23 @@ public class CustomListTest {
         // check if list contains city
         assertEquals(list.hasCity(city), Boolean.TRUE);
     }
+
+    /**
+     * check if list contains city
+     * delete the city from the list and check that it was removed
+     */
+    @Test
+    public void deleteCityTest(){
+        list = MockCityList();
+        int listSize = list.getCount();
+        City city = new City("Estevan", "SK");
+        list.addCity(city);
+        assertEquals(list.getCount(),listSize + 1);
+        // Check if list contains city
+        assertEquals(list.hasCity(city), Boolean.TRUE);
+        // Delete city and check that city was removed
+        list.deleteCity(city);
+        assertEquals(list.getCount(),listSize);
+
+    }
 }
