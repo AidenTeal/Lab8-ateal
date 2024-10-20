@@ -61,11 +61,11 @@ public class CustomListTest {
         City city = new City("Estevan", "SK");
         list.addCity(city);
         assertEquals(list.getCount(),listSize + 1);
+        listSize = list.getCount();
         // Check if list contains city
         assertEquals(list.hasCity(city), Boolean.TRUE);
         // Delete city and check that city was removed
         list.deleteCity(city);
-        assertEquals(list.getCount(),listSize);
-
+        assertEquals(list.getCount(),listSize - 1);
     }
 }
